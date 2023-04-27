@@ -1,0 +1,52 @@
+<mat-card class="mainpage">
+  <mat-card-content class="nav">
+    <p style="color: whitesmoke; font-size: x-large;">Expence Management</p>
+    <mat-form-field class="example-full-width" appearance="outline" >
+      <input matInput formControlName="name" type="text" required [formControl]="filterControl" placeholder="Search....." />
+      
+    </mat-form-field>
+
+    <p> <mat-icon id="icon" (click)="openDialog()">add</mat-icon></p>
+  </mat-card-content>
+  <!-- <input [formControl]="filterControl"/> -->
+  <!-- <mat-form-field class="example-full-width" appearance="outline"  >
+    <mat-label>Custumar Name</mat-label>
+    <input matInput formControlName="name" type="text" required [formControl]="filterControl"/>
+</mat-form-field>
+</mat-card> -->
+
+  <mat-card class="content">
+    <mat-card-content class="scroll">
+      <table>
+
+        <tr class="header2">
+          <th>S.No</th>
+          <th>User id </th>
+          <th>Name</th>
+          <th>Money(pending) </th>
+          <th>Mobile <mat-icon>phone</mat-icon></th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+
+        <tr *ngFor="let user of filteredList ; let i=index">
+          <td><b>{{i+1}}.</b></td>
+          <td mat-header-cell matHeaderCellDef mat-sort-header>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.money}}    {{Rupees}} </td>
+          <td>{{user.mobile}}</td>
+          <td>
+            <mat-icon mat-raised-button matTooltip="update your data"
+              aria-label="Button that displays  a tooltip when focused or hovered over" color="primary"
+              (click)="openEditDialog('edit',user)">edit</mat-icon>
+          </td>
+
+          <td><mat-icon mat-raised-button (click)="opentDialog('0ms', '0ms', user.id)" color="warn"
+              matTooltip="delete your data"
+              aria-label="Button that displays a tooltip when focused or hovered over">delete</mat-icon>
+          </td>
+        </tr>
+
+      </table>
+    </mat-card-content>
+  </mat-card>

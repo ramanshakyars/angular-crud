@@ -1,0 +1,38 @@
+<mat-card class="adduser">
+    <mat-card-content>
+        <h2>Add User</h2>
+<mat-dialog-content>
+    <form [formGroup]="userForm">
+        <p>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Custumar Name</mat-label>
+                <input matInput formControlName="name" type="text" required>
+                
+                
+                
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Money</mat-label>
+                <input matInput formControlName="money" type="number" required>
+               
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class="example-full-width" appearance="outline" >
+                <mat-label>Mobile Number</mat-label>
+                <input matInput formControlName="mobile" type="number" required>
+               
+            </mat-form-field>
+        </p>
+        <mat-dialog-actions>
+
+            <button mat-raised-button color="primary" (click)="postUserData()"  [disabled]="!userForm.valid">Add</button>
+
+            <button mat-raised-button color="warn" mat-dialog-close>cancel</button>
+        </mat-dialog-actions>
+    </form>
+</mat-dialog-content>
+    </mat-card-content>
+</mat-card>

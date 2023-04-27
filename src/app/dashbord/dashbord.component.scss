@@ -1,0 +1,65 @@
+#icon{
+    // margin-left: 1200px;
+    // margin-left: 100%;
+    position: relative;
+    left: 940px;
+    display: flex;
+    float: left;
+    margin-top: 0;
+    background-color: rgb(230, 155, 16);
+    border-radius: 50px;
+}
+
+.nav{
+    display: flex;
+    background-color: blue;
+    top: 0px;
+   
+}
+table{
+    width: 100%;
+    
+}
+td{
+    // margin-left: 50px;
+    text-align: center;
+    font-size: larger;
+}
+th{
+    // border: 5px solid red;
+    font-size: x-large;
+}
+::ng-deep .mat-tooltip {
+    background-color: red;
+  }
+  .content{
+height: 510px;
+max-width: 100%;
+overflow: auto;
+  }
+  table,th,td{
+    border: 1px solid black;
+  }
+ 
+ 
+//   .header2{
+//     top: 64px;
+//     position: fixed;
+//     width: 100%;
+// // margin-left: 400px;
+// background-color: black;
+// // color: whitesmoke;
+
+
+    
+//   }
+//   .header2 th{
+//     // justify-content: space-between;
+// color: whitesmoke;
+// padding-left: 60px;
+//   }
+ 
+
+ 
+ 
+ 
